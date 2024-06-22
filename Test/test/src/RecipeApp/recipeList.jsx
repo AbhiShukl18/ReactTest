@@ -1,20 +1,26 @@
 import React from 'react'
 import AddRecipe from './AddRecipe';
-import "./Style/recipelist.css"
+import "./Style/recipelist.css";
+import "./RecipeDetails";
+import "./AddRecipe";
 
 const RecipeList = ({recipes}) => {
   return (
     <>
     <link rel="stylesheet" href="recipelist.css" />
-    <div className="recipe-list">
+    <div>
+      <a href=""></a>
       <h2>Recipe List</h2>
       {recipes?.map((recipe, index) => (
         <div key={index}>
-        <div className="recipe-card">
-            <h3>{recipe.title}</h3>
-            {recipe.image && <img src={recipe.image} />}
+       
+        <div>
+          <a href="./recipedetails">{recipe.title}</a>
+             
+            <img src={recipe.image} alt="img" width={"100%"} />
         
         </div>
+      
         </div>
       ))}
     </div>

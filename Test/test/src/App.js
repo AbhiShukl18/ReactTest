@@ -10,16 +10,13 @@ import { useState } from 'react';
 function App() {
   const [recipes, setRecipes] = useState([]);
 
-  const addRecipe = (recipe) => {
-    setRecipes([...recipes, recipe]);
-  };
   return (
     <div className="App">
       <Routes>
+      
+      <Route path="/" element={<RecipeList recipes={recipes} />}  />
 
-      <Route path="/home" element={ < Home /> } />
-      <Route path='/add-recipe' element= {< AddRecipe/> } />
-      <Route path='/recipe-list' element= {< RecipeList/> } />
+      <Route path="/add-recipe" element={<AddRecipe setRecipes={setRecipes} />}  />
 
       </Routes>
       
