@@ -107,7 +107,7 @@ const AddRecipe = ({ setRecipes }) => {
 
             <div id="fields">
               <label id="label">Image:</label>
-              <input type="file" id="textfield" onChange={(e) => setImage(e.target.files[0])}/>
+              <input type="file" id="textfield" onChange={(e) => setImage(URL.createObjectURL(e.target.files[0]))}/>    {/*https://www.geeksforgeeks.org/how-to-upload-image-and-preview-it-using-reactjs/ */}
             </div>
             <div id="fields">
               <button type="submit" id="submit">

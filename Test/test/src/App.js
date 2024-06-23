@@ -5,6 +5,7 @@ import Home from './Home';
 import AddRecipe from './RecipeApp/AddRecipe';
 import RecipeList from './RecipeApp/RecipeList';
 import { useState } from 'react';
+import RecipeDetails from './RecipeApp/RecipeDetails';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path="/" element={<RecipeList recipes={recipes} />}  />
 
       <Route path="/add-recipe" element={<AddRecipe setRecipes={setRecipes} />}  />
+      <Route path="/recipe-details/:title" element={<RecipeDetails recipes={recipes} />}  />
 
       </Routes>
       
