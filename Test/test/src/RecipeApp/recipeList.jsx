@@ -17,8 +17,8 @@ const RecipeList = ({recipes}) => {
         <div>
           <a href="./recipedetails">{recipe.title}</a>
              
-            <img src={recipe.image} alt="img" width={"100%"} />
-        
+          <a href="./recipedetails">    <img src={recipe.image} alt="img" width={"100%"} /></a>
+       
         </div>
       
         </div>

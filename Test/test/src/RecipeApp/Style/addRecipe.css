@@ -1,21 +1,23 @@
 .body{
-    /* border: 2px solid red; */
+    border: 2px solid black;
     width: 100%;
-    height: 700px;
-    
+    height: 900px;
+    background: url(https://t3.ftcdn.net/jpg/06/72/45/24/360_F_672452471_4kHMWT93ipMIvpg862kRS3FlwvMKg8nS.jpg);
+    background-size: cover;
 }
 
 .formbody{
 
     /* border: 2px solid green; */
     width: 70%;
-    height: 600px;
+    height: 700px;
     margin: auto;
     padding-top: 30px;
-   
+    /* padding-bottom: 40px; */
 }
 #fields{
     /* border: 2px solid black; */
+    color: ;
     font-size: 20px;
     font-weight: bold;
     display: flex;
@@ -50,9 +52,7 @@
     padding-left: 30px;
     width: 410px;
     height: 200px;
-    line-height: 2.9;
-
-}
+margin-bottom: 20px;}
 
 #label{
 

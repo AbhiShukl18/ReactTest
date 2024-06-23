@@ -3,6 +3,8 @@ import "./Style/addRecipe.css";
 import { useNavigate } from "react-router-dom";
 import "./RecipeDetails"
 import "./RecipeList"
+import { toast } from "react-hot-toast";
+
 
 
 const AddRecipe = ({ setRecipes }) => {
@@ -23,15 +25,49 @@ const AddRecipe = ({ setRecipes }) => {
       preparation,
       image,
     };
+
+  //  const keys= Object.keys(addedreceipe);
+  //  console.log(keys, "keys");
+  //  const values= Object.values(addedreceipe)
+  //  console.log(values, "values");
+    // for(let i=0; i<addedreceipe.length-1; i++){
+    //   console.log(i)
+    //   // console.log(key)
+    //   console.log(addedreceipe[i])  
+    //   // console.log(key.addedreceipe)  
+
+      
+    if(!(addedreceipe.title)){
+      toast.error(` Title is mandatory`);
+  }
+  else if(!(addedreceipe.description)){
+    toast.error(` Description is mandatory`);
+  }
+  else if(!(addedreceipe.ingredients)){
+    toast.error(` Ingredients are mandatory`);
+  }
+  else if(!(addedreceipe.preparation)){
+    toast.error(` Preparation Steps are mandatory`);
+  }
+  else if(!(addedreceipe.image)){
+    toast.error(` Please upload Image`);
+  }
+
+  else{
+
     setRecipes((previous)=>[...previous, addedreceipe]);
+   
     redirect("/")
+    toast.success("Recipe added succesfully");
+  }
+
   }
   return (
     <>
       <link rel="stylesheet" href="addRecipe.css" />
       <div>
         <div className="body">
-          <h1>Add receipe here....</h1>
+          <h1>Add Your Receipe here</h1>
           <form className="formbody" onSubmit={handleSubmit}>
             <div id="fields">
               <label id="label">Title:</label>
