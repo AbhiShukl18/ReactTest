@@ -7,12 +7,16 @@ import { redirect, useNavigate } from "react-router-dom";
 
 const RecipeList = ({ recipes }) => {
 
+  // const trial={recipes};
+// console.log(trial,"recipes");
+// console.log(recipes[0].title,"titles");
+
 
   const redirectTodetails= useNavigate();
 
   function handleClick(){
 
-    redirectTodetails(`/recipe-details/${recipes.title}`)
+    redirectTodetails(`/recipe-details/${recipes[0].title}`)
   }
   return (
     <>
