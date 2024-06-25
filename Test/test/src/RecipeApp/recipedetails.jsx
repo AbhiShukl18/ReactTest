@@ -22,13 +22,15 @@ const RecipeDetails = ({recipes}) => {
            
               <div className='details'>  
               
-              <h1>Title {recipe.title}</h1>
+              <h1> Here are the details of {recipe.title} recipe</h1>
               <img src={recipe.image} alt={recipe.title} width={"500px"} height={"400px"}/>
               <dl>
               <dt>Description:-</dt>
               <dd>{recipe.description}</dd>
-              <dt>ingredients:- </dt> 
+              <dt>Ingredients:- </dt> 
               <dd>{recipe.ingredients}</dd>
+              <dt>Preparation Stpes:- </dt> 
+              <dd>{recipe.preparation}</dd>
               </dl>
               </div>  {/*box */}
             </div> //index 

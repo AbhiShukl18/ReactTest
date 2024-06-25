@@ -1,35 +1,39 @@
 .details-body{
 
     border: 2px solid black;
-    height: 900px;
+    height: 1500px;
     width: 100%;   
-    background: url(https://t3.ftcdn.net/jpg/06/72/45/24/360_F_672452471_4kHMWT93ipMIvpg862kRS3FlwvMKg8nS.jpg);
-    background-size: cover; 
-    color: white;
+    background-color: wheat;
     font-weight: bold;
 }
 
 .details{
     margin-top: 20px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     height: 500px;
 }
 
 .details h1{
 
-    border: 2px solid green;
+    /* border: 2px solid green; */
     text-align: center;
 }
 
 .details dl{
     text-align: left;
     margin-left: 20px;
-    border: 2px solid grey;
+    /* border: 2px solid grey; */
     margin-bottom: 40px;
    
 }
+.details dt{
 
-.details dd{
-
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 26px;
     line-height: 4.9;
+}
+.details dd{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+    line-height: 1.9;
 }
