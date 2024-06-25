@@ -5,7 +5,7 @@ import "./RecipeDetails";
 import "./AddRecipe";
 import { redirect, useNavigate } from "react-router-dom";
 
-const RecipeList = ({ recipes }) => {
+const RecipeList1 = ({ recipes }) => {
 
   // const trial={recipes};
 // console.log(trial,"recipes");
@@ -45,4 +45,4 @@ const RecipeList = ({ recipes }) => {
   );
 };
 
-export default RecipeList;
+export default RecipeList1;

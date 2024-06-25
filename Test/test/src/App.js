@@ -3,9 +3,9 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Home';
 import AddRecipe from './RecipeApp/AddRecipe';
-import RecipeList from './RecipeApp/RecipeList';
 import { useState } from 'react';
 import RecipeDetails from './RecipeApp/RecipeDetails';
+import RecipeList1 from './RecipeApp/RecipeList1';
 
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <Routes>
       
-      <Route path="/" element={<RecipeList recipes={recipes} />}  />
+      <Route path="/" element={<RecipeList1 recipes={recipes} />}  />
 
       <Route path="/add-recipe" element={<AddRecipe setRecipes={setRecipes} />}  />
       <Route path="/recipe-details/:title" element={<RecipeDetails recipes={recipes} />}  />
