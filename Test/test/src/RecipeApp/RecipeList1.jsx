@@ -1,7 +1,7 @@
 import React from "react";
 import AddRecipe from "./AddRecipe";
 import "./Style/recipelist.css";
-import "./RecipeDetails";
+import "./RecipeDetails1";
 import "./AddRecipe";
 import { redirect, useNavigate } from "react-router-dom";
 

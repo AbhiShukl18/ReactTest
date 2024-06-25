@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Style/addRecipe.css";
 import { useNavigate } from "react-router-dom";
-import "./RecipeDetails"
+import "./RecipeDetails1"
 import "./RecipeList1"
 import { toast } from "react-hot-toast";
 

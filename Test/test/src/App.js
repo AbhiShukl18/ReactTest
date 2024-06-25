@@ -4,8 +4,8 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './Home';
 import AddRecipe from './RecipeApp/AddRecipe';
 import { useState } from 'react';
-import RecipeDetails from './RecipeApp/RecipeDetails';
 import RecipeList1 from './RecipeApp/RecipeList1';
+import RecipeDetails1 from './RecipeApp/RecipeDetails1';
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
       <Route path="/" element={<RecipeList1 recipes={recipes} />}  />
 
       <Route path="/add-recipe" element={<AddRecipe setRecipes={setRecipes} />}  />
-      <Route path="/recipe-details/:title" element={<RecipeDetails recipes={recipes} />}  />
+      <Route path="/recipe-details/:title" element={<RecipeDetails1 recipes={recipes} />}  />
 
       </Routes>
       

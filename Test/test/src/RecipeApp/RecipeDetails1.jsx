@@ -1,12 +1,12 @@
 import React from 'react'
-import "./RecipeDetails";
+import "./RecipeDetails1";
 import "./AddRecipe";
 import "./Style/recipedetails.css";
 
 import { useParams } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
-const RecipeDetails = ({recipes}) => {
+const RecipeDetails1 = ({recipes}) => {
   const {title}=useParams();
 // console.log({recipes},"rece")
   // console.log(recipe)
@@ -40,4 +40,4 @@ const RecipeDetails = ({recipes}) => {
   )
 }
 
-export default RecipeDetails;
+export default RecipeDetails1;
