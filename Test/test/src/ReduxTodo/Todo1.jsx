@@ -27,15 +27,31 @@ const Todo1 = () => {
 
     <div>
         <p>
-        <button onClick={todoSubmit}>Add Todo</button>                                          {/*on clicking the button todoSubmit function will call */}
+        <button style={{marginBottom:"30px", fontSize:"19px"}} onClick={todoSubmit}>Add Todo</button>                                          {/*on clicking the button todoSubmit function will call */}
 
             {
                 todos?.map((todo, index)=>(                                   //to delete an an element from an array here we are using Map function where todos is coming from Line no 7(same file) and index is the indexing of resulted array
 
-                <div key={index}>          {/**div key =0,1,2,3... so on */}
-                                                         
-                    {todo.task}                    {/* it is showing the task which is entered by the user where todo is cmoming from Line no 32(same file) and task is coming from Line no 6(action.js) */}
-                    <button onClick={()=>dispatch(remove(index))}>Delete</button>    {/*while clicking on DELETE button where we are removing index of that particular element by using useDispatch where remove fnctn is coming from Line no 18(action.js) which return REMOVE type and which is called further in Line no 22(Reducer.js)*/}
+                <div key={index}
+                style={{
+                  height:"59px",
+                  width:"300px",
+                  marginTop: "10px",
+                  marginLeft: "700px",
+                  display:'flex',
+                  justifyContent:"space-between",
+                  fontSize:"22px",
+                  fontWeight:'bold',  
+        
+                  }}>          {/**div key =0,1,2,3... so on */}
+                    <p>{index+1}     </p>                                 
+                   <p>{todo.task}         </p>            {/* it is showing the task which is entered by the user where todo is cmoming from Line no 32(same file) and task is coming from Line no 6(action.js) */}
+                   <p><button 
+                   style={{width:"80px",
+                    height: "30px",
+                    fontSize: "17px",
+                   }}
+                   onClick={()=>dispatch(remove(index))}>Delete</button>   </p>  {/*while clicking on DELETE button where we are removing index of that particular element by using useDispatch where remove fnctn is coming from Line no 18(action.js) which return REMOVE type and which is called further in Line no 22(Reducer.js)*/}
                 </div>
                 ))
             }
