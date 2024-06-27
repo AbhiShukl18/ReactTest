@@ -1,27 +1,31 @@
-import { ADD, DELET } from "./Action"
+import { act } from "react";
+import { ADD, REMOVE } from "./Action"
 
 const initialState={
-    todos:[],
+    todos:[],                  
 }
 
 const Reducer=(state=initialState, action )=> {
 
     switch(action.type){
 
-        case ADD:
+        case ADD:                                  // when case type ADD calls then it returns:-
             return {
-                todos:[...state.todos,
+                todos:[...state.todos,             // its previous state(by using spread operator)and, 
                 {
-                    id: action.payload.id,
-                    task:action.payload.task
+                    id: action.payload.id,          // id which is indexing 
+                    task:action.payload.task        // task which is entered by user
                 }
             ]
             };
 
-            case DELET:
-            return {
-                todos:[...state.todos.filter(todo=>todo.id !== action.payload)]
-            
+            case REMOVE:                            // when case type REMOVE is called then:- 
+                const newTodos=[...state.todos]       // we are making instance of previous state in to new variable named as newTodos
+                newTodos.splice(action.payload,1);     // then by using splice method we are removing that element which we are selcting by using DELETE button
+            return {                                    // and returing:-
+                ...state,                                  // previous states
+                todos:newTodos,                             // and resulted array after rmoving unwanted element of that array
+                
             };
             default:
                 return state;

@@ -1,5 +1,5 @@
 export const ADD="ADD";
-export const DELET="DELETE";
+export const REMOVE="REMOVE";
 
 export const add=(id, todo)=>{
 
@@ -15,11 +15,11 @@ export const add=(id, todo)=>{
     }
 }
 
-export const delet=(id)=>{
+export const remove=(id)=>{
 
     return{
 
-        type: DELET,
+        type: REMOVE,
         payload:id
     }
 }
