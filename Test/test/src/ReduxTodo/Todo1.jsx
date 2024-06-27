@@ -34,7 +34,7 @@ const Todo1 = () => {
 
                 <div key={index}>          {/**div key =0,1,2,3... so on */}
                                                          
-                    <p>{todo.task} </p>                       {/* it is showing the task which is entered by the user where todo is cmoming from Line no 32(same file) and task is coming from Line no 6(action.js) */}
+                    {todo.task}                    {/* it is showing the task which is entered by the user where todo is cmoming from Line no 32(same file) and task is coming from Line no 6(action.js) */}
                     <button onClick={()=>dispatch(remove(index))}>Delete</button>    {/*while clicking on DELETE button where we are removing index of that particular element by using useDispatch where remove fnctn is coming from Line no 18(action.js) which return REMOVE type and which is called further in Line no 22(Reducer.js)*/}
                 </div>
                 ))
