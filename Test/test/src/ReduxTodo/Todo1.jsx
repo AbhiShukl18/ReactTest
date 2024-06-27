@@ -12,7 +12,7 @@ const Todo1 = () => {
         if(todo!==""){                        // if todo list is empty then:-
         dispatch(add(allTodos, todo))         // dispatch function will call to add the entered todo in todo array
         setallTodos(allTodos+1);              // increase setallTodos by 1 to further check the count of element in todo array  
-        Settodo("");                          // set Settodo as ""
+        Settodo("");                          // set Settodo as "" so that after entering the task it will remove the task from the input field
         
     }
 
@@ -24,10 +24,11 @@ const Todo1 = () => {
       <h1> ToDo List</h1>
       <input type="text" value={todo} onChange={(event)=>Settodo(event.target.value)} />   {/*Input field to enter the Task */}
     </div>
-    <button onClick={todoSubmit}>Add Todo</button>                                          {/*on clicking the button todoSubmit function will call */}
 
     <div>
         <p>
+        <button onClick={todoSubmit}>Add Todo</button>                                          {/*on clicking the button todoSubmit function will call */}
+
             {
                 todos?.map((todo, index)=>(                                   //to delete an an element from an array here we are using Map function where todos is coming from Line no 7(same file) and index is the indexing of resulted array
 
