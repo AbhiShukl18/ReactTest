@@ -9,7 +9,7 @@ const Reducer=(state=initialState, action )=> {
 
     switch(action.type){
 
-        case ADD:                                  // when case type ADD calls then it returns:-
+        case ADD:                                  // when case type ADD calls then it returns todos array with below details:-
             return {
                 todos:[...state.todos,             // its previous state if any(by using spread operator)and, 
                 {
