@@ -12,7 +12,7 @@ const Todo1 = () => {
         if(todo!==""){                        // if todo list is empty then:-
         dispatch(add(allTodos, todo))         // dispatch function will call to add the entered todo in todo array
         setallTodos(allTodos+1);              // increase setallTodos by 1 to further check the count of element in todo array  
-        Settodo("");                          // set Settodo as "" so that after entering the task it will remove the task from the input field
+        Settodo("");                          // set Settodo as "" so that after entering the task it will remove the task from the input field and leaves it blank again
         
     }
 
