@@ -11,7 +11,7 @@ const Reducer=(state=initialState, action )=> {
 
         case ADD:                                  // when case type ADD calls then it returns:-
             return {
-                todos:[...state.todos,             // its previous state(by using spread operator)and, 
+                todos:[...state.todos,             // its previous state if any(by using spread operator)and, 
                 {
                     id: action.payload.id,          // id which is indexing 
                     task:action.payload.task        // task which is entered by user
@@ -23,7 +23,7 @@ const Reducer=(state=initialState, action )=> {
                 const newTodos=[...state.todos]       // we are making instance of previous state in to new variable named as newTodos
                 newTodos.splice(action.payload,1);     // then by using splice method we are removing that element which we are selcting by using DELETE button
             return {                                    // and returing:-
-                ...state,                                  // previous states
+                ...state,                                  // previous states (if any)
                 todos:newTodos,                             // and resulted array after rmoving unwanted element of that array
                 
             };
