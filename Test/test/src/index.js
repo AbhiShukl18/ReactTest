@@ -7,6 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import {Provider} from "react-redux";
 import Store from './ReduxTodo/Store';
+import Store1 from './Login/Store1';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +15,8 @@ root.render(
   
     <BrowserRouter>
     <Provider store={Store}>  
+    <Provider store={Store1}>  
+
     <Toaster
   position="top-center"
   reverseOrder={false}
@@ -41,6 +44,8 @@ root.render(
 />
     <App />
     </Provider>
+    </Provider>  
+
     </BrowserRouter>
   </React.StrictMode>
 

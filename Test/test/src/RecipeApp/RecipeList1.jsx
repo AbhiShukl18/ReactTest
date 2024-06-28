@@ -4,9 +4,12 @@ import "./Style/recipelist.css";
 import "./RecipeDetails1";
 import "./AddRecipe";
 import { redirect, useNavigate } from "react-router-dom";
+import {Reducer} from "../Login/Reducer";
+
 
 const RecipeList1 = ({ recipes }) => {
 
+  
   // const trial={recipes};
 // console.log(trial,"recipes");
 // console.log(recipes[0].title,"titles");
@@ -22,7 +25,6 @@ const RecipeList1 = ({ recipes }) => {
     <>
       <link rel="stylesheet" href="recipelist.css" />
       <div className="list-body">
-       
         <h1>Recipes List</h1>
         <a href="./add-recipe"> Click to Add your Recipe </a>
         <div id="list">
