@@ -12,6 +12,7 @@ const Home = () => {
 
   const handleLogout = () => {
     dispatch(logout());
+    alert("You are Successfully Logged out")
     router("/redux-login") 
   };
 
